@@ -1,6 +1,6 @@
 *Objective:* Write SQL queries to define the database schema (create tables, set constraints).
 
-###Instructions:
+### Instructions:
 
 Based on the provided database specification, create SQL CREATE TABLE statements for each entity.<br>
 
