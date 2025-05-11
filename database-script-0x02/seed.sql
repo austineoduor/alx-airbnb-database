@@ -1,4 +1,4 @@
--- insert
+- insert
 -- Insert data into User table
 INSERT INTO User (first_name, last_name, email, password_hash, phone_number, role) VALUES
 ('Alice', 'Smith', 'alice.smith@example.com', 'hashed_password_1', '555-123-4567', 'guest'),
@@ -18,55 +18,28 @@ INSERT INTO Property (host_id, name, description, location, pricepernight) VALUE
 (2, 'Mountain View Condo', 'Comfortable condo with breathtaking views of the surrounding mountains.', 'Banff, Canada', 200.00),
 (5, 'Lakeside Cottage', 'Quaint cottage right on the lake, perfect for swimming and fishing.', 'Lake Tahoe, CA', 180.00);
 
-
--- Insert data into Payment table
-
-INSERT INTO Payment (booking_id, amount, payment_method) VALUES (1, 150.00, 'credit card');
-
--- Payment for booking_id 2, using paypal
-INSERT INTO Payment (booking_id, amount, payment_method) VALUES (2, 75.50, 'paypal');
-
--- Payment for booking_id 3, using stripe
-INSERT INTO Payment (booking_id, amount, payment_method) VALUES (3, 220.75, 'stripe');
-
--- Payment for booking_id 1 again (e.g., additional charges) using credit card
-INSERT INTO Payment (booking_id, amount, payment_method) VALUES (1, 25.00, 'credit card');
-
--- Payment for booking_id 4, using paypal
-INSERT INTO Payment (booking_id, amount, payment_method) VALUES (3, 100.00, 'paypal');
-
--- Payment for booking_id 5, using stripe
-INSERT INTO Payment (booking_id, amount, payment_method) VALUES (2, 300.25, 'stripe');
-
--- Payment for booking_id 2 again, using credit card
-INSERT INTO Payment (booking_id, amount, payment_method) VALUES (2, 15.00, 'credit card');
-
--- Payment for booking_id 6 using paypal
-INSERT INTO Payment (booking_id, amount, payment_method) VALUES (3, 80.00, 'paypal');
-
--- Payment for booking_id 7 using stripe
-INSERT INTO Payment (booking_id, amount, payment_method) VALUES (2, 120.50, 'stripe');
-
--- Payment for booking_id 8 using credit card
-INSERT INTO Payment (booking_id, amount, payment_method) VALUES (3, 50.00, 'credit card');
-
 -- Sample data for the Booking table
 
 -- Booking 1: Pending booking for property 1 by user 1
-INSERT INTO Booking (property_id, user_id, start_date, end_date, total_price, status)
-VALUES (1, 1, '2024-01-15', '2024-01-20', 500.00, 'pending');
-
+INSERT INTO Booking (property_id, user_id, start_date, end_date, total_price, status) VALUES
+(1, 1, '2024-01-15', '2024-01-20', 500.00, 'pending'),
 -- Booking 2: Confirmed booking for property 2 by user 2
-INSERT INTO Booking (property_id, user_id, start_date, end_date, total_price, status)
-VALUES (2, 2, '2024-02-10', '2024-02-17', 850.50, 'confirmed');
-
+(2, 2, '2024-02-10', '2024-02-17', 850.50, 'confirmed'),
 -- Booking 3: Canceled booking for property 3 by user 3
-INSERT INTO Booking (property_id, user_id, start_date, end_date, total_price, status)
-VALUES (3, 3, '2024-03-01', '2024-03-05', 300.00, 'canceled');
-
+(3, 3, '2024-03-01', '2024-03-05', 300.00, 'canceled'),
 -- Booking 4: Confirmed booking for property 1 by user 2
-INSERT INTO Booking (property_id, user_id, start_date, end_date, total_price, status)
-VALUES (1, 2, '2024-04-01', '2024-04-08', 700.00, 'confirmed');
+(1, 2, '2024-04-01', '2024-04-08', 700.00, 'confirmed');
+
+-- Insert data into Payment table
+
+INSERT INTO Payment (booking_id, amount, payment_method) VALUES
+(1, 150.00, 'credit card'),
+-- Payment for booking_id 2, using paypal
+(2, 75.50, 'paypal'),
+-- Payment for booking_id 3, using stripe
+(3, 220.75, 'stripe'),
+-- Payment for booking_id 4 again (e.g., additional charges) using credit card
+(4, 25.00, 'credit card');
 
 
 -- Insert data into Review table
