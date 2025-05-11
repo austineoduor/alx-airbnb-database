@@ -106,3 +106,5 @@ Foreign key constraints on sender_id and recipient_id.<br>
    email in the User table.<br>
     property_id in the Property and Booking tables.<br>
     booking_id in the Booking and Payment tables.
+![Database_Specification-AirBnB](https://github.com/user-attachments/assets/ad3b473a-dba7-4771-b8cc-4a6473a2ede7)
+
