@@ -11,3 +11,10 @@ FROM Booking
 WHERE property_id IN
 (SELECT property_id FROM Property)
 GROUP BY property_id;
+
+SELECT property_id, COUNT(booking_id) AS totalbookings,
+ROW_NUMBER() OVER(PARTITION BY property_id ORDER BY property_id DESC) AS property_rank
+FROM Booking
+WHERE property_id IN
+(SELECT property_id FROM Property)
+GROUP BY property_id;
