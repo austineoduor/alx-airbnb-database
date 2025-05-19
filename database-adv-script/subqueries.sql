@@ -1,4 +1,4 @@
--- Rating is greater than 4.0
+-- AVG Rating is greater than 4.0
 SELECT * FROM property
 WHERE property_id IN
 (SELECT property_id FROM Review
