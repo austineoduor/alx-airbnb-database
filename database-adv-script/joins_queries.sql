@@ -12,7 +12,7 @@ ON Property.property_id = Review.property_id;
 ORDER BY start_date;
 
 
-/* FULL JOIN is a combination of RIGHT and LEFT Joins
+/* FULL OUTER JOIN is a combination of RIGHT and LEFT Joins
 */
 -- LEFT JOIN
 SELECT *
