@@ -1,4 +1,4 @@
-- insert
+-- insert
 -- Insert data into User table
 INSERT INTO User (first_name, last_name, email, password_hash, phone_number, role) VALUES
 ('Alice', 'Smith', 'alice.smith@example.com', 'hashed_password_1', '555-123-4567', 'guest'),
