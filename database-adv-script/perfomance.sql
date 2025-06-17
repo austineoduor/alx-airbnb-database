@@ -1,4 +1,4 @@
---WHRE AND
+--WHERE AND
 
 
 SELECT * 
