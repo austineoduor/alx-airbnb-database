@@ -1,3 +1,6 @@
+--WHRE AND
+
+
 SELECT * 
 FROM Booking
 INNER JOIN User
